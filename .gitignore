@@ -6,3 +6,12 @@ tvb_lems/__pycache__.idea
 /tvb_lems/*.pyc
 
 /tvb_lems/x86_64
+/tvb_lems/networks/*.dat
+/tvb_lems/networks/*.gv*
+/tvb_lems/networks/ExampleK.json
+/tvb_lems/networks/*_nrn.py
+/tvb_lems/networks/*.spikes
+/tvb_lems/networks/SimExampleK.json
+/tvb_lems/networks/*.mod
+/tvb_lems/networks/report*.txt
+/tvb_lems/networks/x86_64

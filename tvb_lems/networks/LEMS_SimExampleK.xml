@@ -1,0 +1,89 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.3.15 (libNeuroML v0.2.46)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="SimExampleK" reportFile="report.SimExampleK.txt"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="PyNN.xml"/>
+    <Include file="CellExamples.xml"/>
+    <Include file="ExampleK.net.nml"/>
+   
+    <Simulation id="SimExampleK" length="1000.0ms" step="0.025ms" target="ExampleK" seed="123">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="Epop_4_sin_theta" title="Plots of Epop_4_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_4_kuramoto1_sin_theta" quantity="Epop/4/kuramoto1/sin_theta" scale="1" color="#6aa799" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_7_sin_theta" title="Plots of Epop_7_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_7_kuramoto1_sin_theta" quantity="Epop/7/kuramoto1/sin_theta" scale="1" color="#029a72" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_0_sin_theta" title="Plots of Epop_0_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_0_kuramoto1_sin_theta" quantity="Epop/0/kuramoto1/sin_theta" scale="1" color="#d340bb" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_6_sin_theta" title="Plots of Epop_6_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_6_kuramoto1_sin_theta" quantity="Epop/6/kuramoto1/sin_theta" scale="1" color="#4c73a9" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_2_sin_theta" title="Plots of Epop_2_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_2_kuramoto1_sin_theta" quantity="Epop/2/kuramoto1/sin_theta" scale="1" color="#5e503a" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_5_sin_theta" title="Plots of Epop_5_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_5_kuramoto1_sin_theta" quantity="Epop/5/kuramoto1/sin_theta" scale="1" color="#3193ca" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_3_sin_theta" title="Plots of Epop_3_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_3_kuramoto1_sin_theta" quantity="Epop/3/kuramoto1/sin_theta" scale="1" color="#90e5e9" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Epop_1_sin_theta" title="Plots of Epop_1_sin_theta" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-1" ymax="1">
+            <Line id="Epop_1_kuramoto1_sin_theta" quantity="Epop/1/kuramoto1/sin_theta" scale="1" color="#29645f" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="Epop_7_sin_theta_dat" fileName="Epop_7.sin_theta.dat">
+            <OutputColumn id="Epop_7_kuramoto1_sin_theta" quantity="Epop/7/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_3_sin_theta_dat" fileName="Epop_3.sin_theta.dat">
+            <OutputColumn id="Epop_3_kuramoto1_sin_theta" quantity="Epop/3/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_1_sin_theta_dat" fileName="Epop_1.sin_theta.dat">
+            <OutputColumn id="Epop_1_kuramoto1_sin_theta" quantity="Epop/1/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_5_sin_theta_dat" fileName="Epop_5.sin_theta.dat">
+            <OutputColumn id="Epop_5_kuramoto1_sin_theta" quantity="Epop/5/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_4_sin_theta_dat" fileName="Epop_4.sin_theta.dat">
+            <OutputColumn id="Epop_4_kuramoto1_sin_theta" quantity="Epop/4/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_6_sin_theta_dat" fileName="Epop_6.sin_theta.dat">
+            <OutputColumn id="Epop_6_kuramoto1_sin_theta" quantity="Epop/6/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_0_sin_theta_dat" fileName="Epop_0.sin_theta.dat">
+            <OutputColumn id="Epop_0_kuramoto1_sin_theta" quantity="Epop/0/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+        <OutputFile id="Epop_2_sin_theta_dat" fileName="Epop_2.sin_theta.dat">
+            <OutputColumn id="Epop_2_kuramoto1_sin_theta" quantity="Epop/2/kuramoto1/sin_theta"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>

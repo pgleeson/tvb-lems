@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Lems>
+    
+    <Include file="../kuramoto.lems.xml" />
+    
+    <kuramoto id="kuramoto1" omega="0.1"/>
+  
+</Lems>
