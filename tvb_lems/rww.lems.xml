@@ -10,7 +10,8 @@
     <Parameter dimension="none" name="ts"/>
     <Parameter dimension="none" name="io"/>
     <Parameter dimension="none" name="d"/>
-    <Constant dimension="time" name="MSEC" value="1ms"/>
+    <Constant dimension="none" name="PI" value="3.14159265359"/>
+    <Constant dimension="time" name="SEC" value="1s"/>
     <Attachments name="synapses" type="basePointCurrentDL"/>
     <Exposure dimension="none" name="c"/>
     <Exposure dimension="none" name="S"/>
@@ -21,10 +22,13 @@
       <DerivedVariable name="x" value="w * J * S + io + J * c"/>
       <DerivedVariable exposure="S" name="S" value="S"/>
       <DerivedVariable name="h" value="(a * x - b) / (1 - exp(-d*(a*x - b)))"/>
-      <TimeDerivative value="(- (S / ts) + (1 - S) * h * g)/MSEC" variable="S"/>
+      <TimeDerivative value="(- (S / ts) + (1 - S) * h * g)/SEC" variable="S"/>
       <OnCondition test="v .gt. 0">
         <EventOut port="spike"/>
       </OnCondition>
+      <OnStart>
+          <StateAssignment variable="S" value="-2.0" />
+      </OnStart>
     </Dynamics>
   </ComponentType>
 </Lems>

@@ -3,8 +3,8 @@
   <Dimension name="time" t="1"/>
   <ComponentType extends="baseCellMembPot" name="kuramoto">
     <Parameter dimension="none" name="omega"/>
-    <Constant dimension="time" name="MSEC" value="1ms"/>
-    <Constant dimension="none" name="pi2" value="6.283185307179586" />
+    <Constant dimension="none" name="PI" value="3.14159265359"/>
+    <Constant dimension="time" name="SEC" value="1s"/>
     <Attachments name="synapses" type="basePointCurrentDL"/>
     <Exposure dimension="none" name="I"/>
     <Exposure dimension="none" name="theta"/>
@@ -14,12 +14,9 @@
       <StateVariable dimension="voltage" exposure="v" name="v"/>
       <DerivedVariable dimension="none" exposure="I" name="I" reduce="add" select="synapses[*]/I"/>
       <DerivedVariable exposure="sin_theta" name="sin_theta" value="sin(theta)"/>
-      <TimeDerivative value="(omega + I)/MSEC" variable="theta"/>
+      <TimeDerivative value="(omega + I)/SEC" variable="theta"/>
       <OnCondition test="v .gt. 0">
         <EventOut port="spike"/>
-      </OnCondition>
-      <OnCondition test="theta .gt. pi2">
-        <StateAssignment variable="theta" value="0.0" />
       </OnCondition>
     </Dynamics>
   </ComponentType>

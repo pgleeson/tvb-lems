@@ -14,7 +14,8 @@
     <Parameter dimension="none" name="beta"/>
     <Parameter dimension="none" name="alpha"/>
     <Parameter dimension="none" name="gamma"/>
-    <Constant dimension="time" name="S" value="1s"/>
+    <Constant dimension="none" name="PI" value="3.14159265359"/>
+    <Constant dimension="time" name="SEC" value="1s"/>
     <Attachments name="synapses" type="basePointCurrentDL"/>
     <Exposure dimension="none" name="c_0"/>
     <Exposure dimension="none" name="W"/>
@@ -26,8 +27,8 @@
       <DerivedVariable dimension="none" exposure="c_0" name="c_0" reduce="add" select="synapses[*]/I"/>
       <DerivedVariable exposure="W" name="W" value="W"/>
       <DerivedVariable exposure="V" name="V" value="V"/>
-      <TimeDerivative value="(d * tau * (alpha*W - f*V^3 + e*V^2 + g*V + gamma*I + gamma*c_0))/S" variable="V"/>
-      <TimeDerivative value="(d * (a + b*V + c*V^2 - beta*W) / tau)/S" variable="W"/>
+      <TimeDerivative value="(d * (a + b*V + c*V^2 - beta*W) / tau)/SEC" variable="W"/>
+      <TimeDerivative value="(d * tau * (alpha*W - f*V^3 + e*V^2 + g*V + gamma*I + gamma*c_0))/SEC" variable="V"/>
       <OnCondition test="v .gt. 0">
         <EventOut port="spike"/>
       </OnCondition>
