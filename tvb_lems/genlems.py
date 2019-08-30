@@ -47,7 +47,7 @@ def build_lems_for_model(src):
         
     
         
-    mass.add(lems.Constant(name="SEC", dimension="time", value="1s"))
+    mass.add(lems.Constant(name="MSEC", dimension="time", value="1ms"))
     mass.add(lems.Constant(name="PI", dimension="none", value="3.14159265359"))
 
     states = []
@@ -68,7 +68,7 @@ def build_lems_for_model(src):
         name = src_svar.name
         ddt = src_svar.drift.replace('**', '^')
         mass.dynamics.add(lems.StateVariable(name, 'none', name))
-        mass.dynamics.add(lems.TimeDerivative(name, '(%s)/SEC'%ddt))
+        mass.dynamics.add(lems.TimeDerivative(name, '(%s)/MSEC'%ddt))
         mass.add(lems.Exposure(name, 'none'))
         
     ''' On condition is not need on the model but NeuroML requires its definition -->

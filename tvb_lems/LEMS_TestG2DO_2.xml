@@ -29,9 +29,9 @@
     <!-- End of NeuroML2 content -->
 
 
-    <Simulation id="sim1" length="1000000ms" step="10ms" target="net1">
+    <Simulation id="sim1" length="1000ms" step="0.01ms" target="net1">
 
-        <Display id="d1" title="Ex   LEMS" timeScale="1s" xmin="-50" xmax="1050" ymin="-2.5" ymax="2.5">
+        <Display id="d1" title="Ex   LEMS" timeScale="1s" xmin="-50" xmax="1050" ymin="-.6" ymax=".1">
             <Line id="V" quantity="Pop1[0]/V" scale="1" color="#e77000" timeScale="1ms" />
             <Line id="W" quantity="Pop1[0]/W" scale="1" color="#ee00FF" timeScale="1ms" />
             <!--

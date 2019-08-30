@@ -12,7 +12,7 @@
     
     <Include file="linear.lems.xml" />
 
-    <pulseGeneratorDL id="pg0" delay="20s" duration="100s" amplitude="1" />
+    <pulseGeneratorDL id="pg0" delay="200ms" duration="500ms" amplitude="0.1" />
 
     <linear id="linear1" lam="-1"/>
 
@@ -25,7 +25,7 @@
     <!-- End of NeuroML2 content -->
 
 
-    <Simulation id="sim1" length="160s" step="0.1s" target="net1">
+    <Simulation id="sim1" length="1s" step="0.01ms" target="net1">
 
         
         <Display id="d0" title="Example" timeScale="1s" xmin="-10" xmax="150" ymin="-2.5" ymax="2.5">

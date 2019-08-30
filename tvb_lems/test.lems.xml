@@ -8,7 +8,7 @@
     <Parameter dimension="none" name="e"/>
     <Parameter dimension="none" name="d"/>
     <Constant dimension="none" name="PI" value="3.14159265359"/>
-    <Constant dimension="time" name="SEC" value="1s"/>
+    <Constant dimension="time" name="MSEC" value="1ms"/>
     <Attachments name="synapses" type="basePointCurrentDL"/>
     <Exposure dimension="none" name="i1"/>
     <Exposure dimension="none" name="y1"/>
@@ -20,8 +20,8 @@
       <DerivedVariable dimension="none" exposure="i1" name="i1" reduce="add" select="synapses[*]/I"/>
       <DerivedVariable exposure="y1" name="y1" value="y1"/>
       <DerivedVariable name="y1_3" value="y1 * y1 * y1"/>
-      <TimeDerivative value="((y1 - y1_3/3 + y2 + e)*b)/SEC" variable="y1"/>
-      <TimeDerivative value="((a - y1 + i1 + d)/b)/SEC" variable="y2"/>
+      <TimeDerivative value="((y1 - y1_3/3 + y2 + e)*b)/MSEC" variable="y1"/>
+      <TimeDerivative value="((a - y1 + i1 + d)/b)/MSEC" variable="y2"/>
       <OnCondition test="v .gt. 0">
         <EventOut port="spike"/>
       </OnCondition>

@@ -4,7 +4,7 @@
   <ComponentType extends="baseCellMembPot" name="linear">
     <Parameter dimension="none" name="lam"/>
     <Constant dimension="none" name="PI" value="3.14159265359"/>
-    <Constant dimension="time" name="SEC" value="1s"/>
+    <Constant dimension="time" name="MSEC" value="1ms"/>
     <Attachments name="synapses" type="basePointCurrentDL"/>
     <Exposure dimension="none" name="x"/>
     <Exposure dimension="none" name="c"/>
@@ -13,7 +13,7 @@
       <StateVariable dimension="voltage" exposure="v" name="v"/>
       <DerivedVariable exposure="x" name="x" value="x"/>
       <DerivedVariable dimension="none" exposure="c" name="c" reduce="add" select="synapses[*]/I"/>
-      <TimeDerivative value="(lam * x + c)/SEC" variable="x"/>
+      <TimeDerivative value="(lam * x + c)/MSEC" variable="x"/>
       <OnCondition test="v .gt. 0">
         <EventOut port="spike"/>
       </OnCondition>

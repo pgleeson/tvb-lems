@@ -17,7 +17,7 @@
     <kuramoto id="k1" omega="0.1"/>
 
 
-    <pulseGeneratorDL id="pg0" delay="100ms" duration="100ms" amplitude="150" />
+    <pulseGeneratorDL id="pg0" delay="100ms" duration="100ms" amplitude="1" />
     
     <network id="net1">
         <population id="Pop1" component="k1" size="1" />
